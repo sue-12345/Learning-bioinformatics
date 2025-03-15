@@ -1,9 +1,10 @@
 # Learning-bioinformatics  
 For learning bioinformatics  
-# FASTAQ and FASTAQC:  
+# 一、FASTAQ and FASTAQC:  
 高通量测序数据的质量控制工具: 'http://www.bioinformatics.babraham.ac.uk/projects/fastqc/' 
 MultiQC  
-### 了解 fastq 文件：
+### 1.1 了解 fastq 文件： 
+  
 fastq 格式文件处理2大工具：seqkit seqtk 'https://bioinf.shenwei.me/seqkit/'   
 ##### 1、压缩与解压缩  
 ###### 解压缩  
@@ -65,7 +66,7 @@ fastq 格式文件处理2大工具：seqkit seqtk 'https://bioinf.shenwei.me/seq
 ##### 23、将小于 Q20 的替换为小写字母  
 `seqtk seq -q 20 illumina_1.fastq.gz`
   
-## illumina 数据质控及过滤
+## 1.2 illumina 数据质控及过滤
 
 ### 1、利用 fastqc 进行质量控制
 fastqc 质控(可以用conda安装，-f 什么格式的文件，-o 输出到什么文件（_qc）/输入文件)    
@@ -79,7 +80,8 @@ fastqc 质控(可以用conda安装，-f 什么格式的文件，-o 输出到什�
 `mkdir illumina_clean`  
 `fastqc -f fastq -o illumina_clean/ clean.1.fq.gz clean.2.fq.gz`  
 
-### pacbio 数据质控及过滤
+### 1.3 pacbio 数据质控及过滤  
+  
 #fastqc 质控  
 `mkdir pacbio_qc/`  
 `fastqc -f fastq -o pacbio_qc/ pacbio.fastq.gz`  
@@ -90,7 +92,9 @@ fastqc 质控(可以用conda安装，-f 什么格式的文件，-o 输出到什�
 `fastqc -f fastq -o pacbio_clean/ pacbio.filtlong.fq.gz`  
 
 
+# 二、Mapping algorithms:   
 
+### 2.1  
 
 
 
